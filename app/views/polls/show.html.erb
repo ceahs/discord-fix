@@ -1,0 +1,11 @@
+<h1><%= @poll.title %></h1>
+<h1><%= @poll.question1 %></h1>
+<h1><%= @poll.question2 %></h1>
+<h1><%= @poll.question3 %></h1>
+<h1><%= @poll.question4 %></h1>
+
+
+<%= link_to "Question1", submit1_polls_path(poll_id: @poll.id) %>
+<%= link_to "Question2", submit2_polls_path(id: @poll.id) %>
+<%= link_to "Question3", submit3_polls_path(id: @poll.id) %>
+<%= link_to "Question4", submit4_polls_path(id: @poll.id) %>

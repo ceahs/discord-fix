@@ -1,0 +1,73 @@
+# create a discord token at https://discordapp.com/developers/applications/me
+# and you can get the server invite link at https://discordapp.com/developers/docs/resources/guild#get-guild-invites
+
+POST  http://localhost:3000/api/auth/authenticate
+Content-Type: application/json
+
+{
+    "password": "token52",
+    "password_confirmation": "token52",
+    "discord_token": ""
+}
+
+### Send message
+POST  http://localhost:3000/api/message
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "channel": "1033954949983375461",
+    "message": "Hello world!"
+}
+
+### Create poll
+POST http://localhost:3000/polls
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "title": "Test poll",
+    "question1": "Question 1",
+    "question2": "Question 2",
+    "question3": "Question 3",
+    "question4": "Question 4",
+    "channel": "1033954949983375461",
+    "message": "Vote in this poll"
+}
+
+### Get poll results
+GET http://localhost:3000/polls/results
+Content-Type: application/json
+Authorization: Bearer 
+
+
+### Get btc price
+GET http://localhost:3000/api/btc
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+    "channel": "1033954949983375461"
+}
+
+### Post poll answer 1, submit1 = first option, sumbit2 = second option, etc. Poll id is the id of the poll you want to answer.
+POST http://localhost:3000/polls/submit1?poll_id=1
+Content-Type: application/json
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
